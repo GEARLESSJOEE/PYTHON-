@@ -1,0 +1,17 @@
+b = [[], [], []]
+teacher = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+import random
+while len(b[0]) == 0 or len(b[1]) == 0 or len(b[2]) == 0:
+    b = [[], [], []]
+    for r in teacher:
+        i = random.randint(0, 2)
+        b[i].extend(r)
+        l = random.randint(0, 2)
+i = 0
+while i<3:
+    print('办公室%s的人数为%s'%(i+1, len(b[i])))
+    i+=1
+    for v in b[i-1]:
+        print(v, end='\t')
+    print('\n')
+    print('-'*20)
