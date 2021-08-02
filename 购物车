@@ -1,0 +1,29 @@
+products = [['iphone', 6888], ['MacPro', 14800], ['小米6', 2499], ['Coffee', 31], ['Book', 60], ['Nike', 699]]
+print('-'*6, '商品列表', '-'*6)
+i = 0
+for product in products:
+    print(i, end='\t')
+    for pro in product:
+        print(pro,end='\t')
+    i+=1
+    print('\n')
+
+products = [['iphone', 6888], ['MacPro', 14800], ['小米6', 2499], ['Coffee', 31], ['Book', 60], ['Nike', 699]]
+namelist =[]
+while True:
+    goumai = input('请问您选择的商品编号是(退出请按q)：')
+    if goumai.isdigit():
+        number = int(goumai)
+        if 0-1 < number < 6:
+            namelist.append(products[number])
+        else:
+            print('请输入正确编号')
+    else:
+        if 'q' in goumai:
+            for names in namelist:
+                for items in names:
+                    print(items, end='\t')
+                print('\n')
+            break
+        else:
+            print('请输入正确编号')
