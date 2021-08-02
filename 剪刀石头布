@@ -1,0 +1,44 @@
+while True:
+    x = input('请输入：剪刀（0）、石头（1）、布（2）:')
+    if x.isdigit():
+        break
+    else:
+        print('请重新输入正确数字')
+import random
+shoushi = int(x)
+xitong = random.randint(0, 2)
+if shoushi == 1:
+        print('你的输入为：石头（1）')
+        if xitong==2:
+            print('随机生成数字为：%d'%xitong)
+            print('哈哈，你输了了')
+        elif xitong==1:
+            print('随机生成数字为：%d' % xitong)
+            print('哈哈，你平了')
+        else :
+            print('随机生成数字为：%d' % xitong)
+            print('哈哈，你赢了')
+elif shoushi == 2:
+        print('你的输入为：布（2）')
+        if xitong==2:
+            print('随机生成数字为：%d'%xitong)
+            print('哈哈，你平了')
+        elif xitong==1:
+            print('随机生成数字为：%d' % xitong)
+            print('哈哈，你赢了')
+        else :
+            print('随机生成数字为：%d' % xitong)
+            print('哈哈，你输了了')
+elif shoushi == 0:
+        print('你的输入为：剪刀（0）')
+        if xitong==2:
+            print('随机生成数字为：%d'%xitong)
+            print('哈哈，你赢了')
+        elif xitong==1:
+            print('随机生成数字为：%d' % xitong)
+            print('哈哈，你输了')
+        else :
+            print('随机生成数字为：%d' % xitong)
+            print('哈哈，你平了')
+else :
+        print('请重新输入正确的数字')
